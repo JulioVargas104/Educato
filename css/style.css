@@ -1855,7 +1855,7 @@ border-radius: 10px;
 }
 
 .services-box .services-icon {
-      border: 1px solid #fe8366;
+      border: 1px solid #007bff;
     display: inline-block;
     padding: 15px;
     width: 60px;
@@ -2160,11 +2160,11 @@ display: none;
 	transform: translate(-50%,-50%);
 	z-index: 9;
 	font-size: 14px;
-	color: #fe8366;
+	color: #007bff;
 	height: 80px;
 	width: 80px;
 	text-align: center;
-	background: #fe8366;
+	background: #007bff;
 	border-radius: 50%;
     padding: 25px;
 }
@@ -2175,7 +2175,7 @@ display: none;
 	top: 50%;
 	height: 90px;
 	width: 90px;
-	background: #fe8366;
+	background: #007bff ;
 	z-index: -1;
 	border-radius: 50%;
 	transform: translate(-50%,-50%);
@@ -3374,7 +3374,7 @@ margin-bottom: 20px;
     font-size: 14px;
 }
 .blog-content2 .b-meta .date-b {
-background-color: rgb(254, 131, 102);
+background-color: #007bff;
 box-shadow: 1px 1.732px 30px 0px rgba(254, 131, 102, 0.4);
 border-radius: 30px;
 display: inherit;
@@ -3424,7 +3424,7 @@ font-weight: 600;
 
 .blog-btn a {
     display: inline-block;
-    color: #fe8366;
+    color: #007bff;
     text-align: center;
     font-size: 14px;
     text-decoration: underline;
@@ -4046,7 +4046,7 @@ color: #fff;
     position: relative;
 }
 .copyright-wrap li::before {
-    background: #fe8366;
+    background: #3763eb;
     height: 5px;
     width: 5px;
     border-radius: 50%;
@@ -4067,7 +4067,7 @@ color: #fff;
     text-align: center;
     border-radius: 50%;
     float: left;
-  background-color: #fe8366;
+  background-color: #3763eb;
 }
 
 .f-contact li {
@@ -5360,7 +5360,7 @@ text-align: center;
 	margin-bottom: 0;
 }
 .pagination-wrap .pagination li.active a {
-	background: #fe8366;
+	background: #007bff;
 	color: #ffffff;
 	box-shadow: 0px 8px 16px 0px rgba(26, 35, 126, 0.32);
 }
@@ -5370,8 +5370,8 @@ text-align: center;
     width: 50px;
     display: block;
     line-height: 50px;
-    background: #fe8366;
-    box-shadow: 3px 4px 15px #EB3449A6;
+    background: #007bff;
+    box-shadow: 3px 4px 15px #007bff;
     border-radius: 50%;
     color: #fff;
     font-size: 14px;
@@ -8784,12 +8784,12 @@ blockquote footer {
 	font-weight: 500;
 }
 .pagination .page-item:hover a.page-link {
-	box-shadow: 0px 16px 32px 0px rgba(255, 74, 87, 0.2);
+	box-shadow: 0px 16px 32px 0px #007bff;
 	background: #ff4a57;
 	color: #fff;
 }
 .pagination .page-item.active a.page-link {
-	box-shadow: 0px 16px 32px 0px rgba(255, 74, 87, 0.2);
+	box-shadow: 0px 16px 32px 0px #007bff;
 	background: #ff4a57;
 	color: #fff;
 }
@@ -8804,9 +8804,9 @@ blockquote footer {
 	margin-bottom: 15px;
 }
 .pagination-wrap .pagination li.active a {
-	background:#252525;
+	background:#007bff;
 	color: #ffffff;
-	box-shadow: 0px 8px 16px 0px rgba(26, 35, 126, 0.32);
+	box-shadow: 0px 8px 16px 0px #007bff;
 }
 .pagination-wrap .pagination li a {
 	border: none;
@@ -8814,7 +8814,7 @@ blockquote footer {
 	width: 50px;
 	display: block;
 	line-height: 50px;
-	background: #fe8366;
+	background: #007bff;
 	border-radius: 50%;
 	color: #fff;
 	font-size: 14px;
@@ -8920,13 +8920,13 @@ div.single-cta:last-child {
     width: 80%;
     height: 80%;
     left: 18px;
-    border: 2px dashed #fe8366;
+    border: 2px dashed #007bff;
     position: absolute;
     top: 16px;
     border-radius: 10px;
 }
 .eventes-box .date-box h3{
-    color: #fe8366;
+    color: #40a4df;
     font-size: 50px;
 }
 .eventes-box .text ul{
@@ -8936,7 +8936,7 @@ div.single-cta:last-child {
 .eventes-box .text li {
     display: inline;
     margin-right: 20px;
-    color: #fe8366;
+    color: #007bff;
     
 }
 .eventes-box .text li i{
