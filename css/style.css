@@ -783,7 +783,7 @@ text-transform: uppercase;}
     top: 10px;
     bottom: 10px;
     border-radius: 10px;
-  background-color: #fe8366;
+  background-color: rgb(64, 164, 223);
   box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.4);
     color: #fff;
    
@@ -1060,7 +1060,7 @@ border: 2px solid #fe8366;
     color: #777;
 }
 .btn.ss-btn {
-    background: #fe8366;
+    background: rgb(64, 164, 223);
     border-radius: 10px;
     color: #FFF;
     padding:20px 30px;
@@ -1152,12 +1152,12 @@ display: block;
     font-weight: 600;
     width: 100%;
     border-radius: 50%;
-    border: 2px dashed #fe8366;
+    border: 2px dashed #007bff;
     padding-top: 19px;
     line-height: 20px;
 }
 .about-text .all-text h3 {
-    color: #fe8366;
+    color: #40a4df;
     font-size: 36px;
     margin-bottom: 0;
 }
@@ -1185,7 +1185,7 @@ display: block;
     line-height: 1.4;
 }
 .about-title h5{
-   color: #fe8366;
+   color: #007bff;
     font-size: 22px;
     margin-bottom: 15px;
 }
@@ -1444,7 +1444,7 @@ display: inline-block;
 margin: 0 10px;
 }
 .section-title h5{
-    color: #fe8366;
+    color: #007bff ;
     margin-bottom: 15px;
 }
 .section-title h2 {
@@ -1503,7 +1503,7 @@ section:hover .section-title h2::before{width: 100px;}
     font-family: "Font Awesome 5 Pro";
     content: "";
     margin-right: 10px;
-    color: #fe8366;
+    color: rgb(64, 164, 223);
     font-size: 25px;
 margin-top: 5px;
 }
@@ -3636,7 +3636,7 @@ margin-top: 30px;
 }
 .pricing-btn .btn.ss-btn{
    border-radius: 10px;
-background-color: #fe8366;
+background-color: rgb(254, 131, 102);
 box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.4);
 color: #fff;
 border-color: #4CC3C1;
