@@ -53,6 +53,19 @@ router.post('/crear-curso',
     // authController.usuarioAutenticado,
     cursosController.crearCurso
 )
+router.post('/eliminar-curso/:id',
+    // authController.usuarioAutenticado,
+    cursosController.eliminarCurso
+)
+
+router.get('/actualizar-curso/:id',
+    authController.usuarioAutenticado,
+    intranetController.actualizarCurso
+)
+router.post('/actualizar-curso/:id',
+    // authController.usuarioAutenticado,
+    cursosController.actualizarCurso
+)
 
 router.get('/mostrar-usuario',
     usuarioController.mostrarUsuarios

@@ -18,8 +18,23 @@ const coursos = async (req, res) => {
 const crearCurso = (req, res) => {
     res.render('Intranet/crearCursos', { isPublic: false });
 }
+const actualizarCurso = async(req, res) =>{
+    try {
+        const idCurso = req.params.id;
+        const curso = await Curso.findByPk(idCurso);
+        if (!curso) {
+            return res.status(404).send('El curso no existe');
+        }
+        res.render('Intranet/updateCursos', { isPublic: false, curso: curso });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al obtener el curso');
+    }
+}
+
 export default {  
     intranet,
     coursos,
-    crearCurso
+    crearCurso,
+    actualizarCurso
 }

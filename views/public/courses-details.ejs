@@ -25,13 +25,13 @@
                         <div class="col-xl-12 col-lg-12">
                             <div class="breadcrumb-wrap text-left">
                                 <div class="breadcrumb-title">
-                                    <h2>Courses Details</h2>    
+                                    <h2>Curso Detallado</h2>    
                                     <div class="breadcrumb-wrap">
                               
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Cursos</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -50,63 +50,37 @@
             <div class="lower-content">
                 <div class="row">
                     <div class="text-column col-lg-8 col-md-8 col-sm-12">
-                        <h2>UI-UX Web Design, Graphic Design</h2>
-                        <ul class="course-meta review style2 clearfix mb-30">
-                                <li class="author">
-                                    <div class="thumb">
-                                        <img src="/img/testimonial/testi_avatar.png" alt="image">
-                                    </div>
+                        <h2><%= curso.titulo %></h2>
 
-                                    <div class="text">
-                                        <a href="#">Robto Jone</a>
-                                        <p>Teacher</p>
-                                    </div>
-                                </li>
-                                <li class="categories">
-                                    <a href="#" class="course-name">Photoshop</a>
-                                    <p>Categories</p>
-                                </li>
-                                
-                           
-                            </ul>
                          <div class="upper-box">
                             <div class="single-item-carousel owl-carousel owl-theme">
                                 <div class="video-img wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s" style="background-image:url(/img/video/vedio-img.png); background-repeat: no-repeat; background-position: center;">								
-                                    <a href="https://www.youtube.com/watch?v=EeWdvJrdPpU" class="video-i popup-video"> <img src="/img/video/play.svg" alt="img" class="active-icon"></a>
+                                    <a href="<%= curso.url_video %>" class="video-i popup-video"> <img src="/img/video/play.svg" alt="img" class="active-icon"></a>
                                 </div> 
                             </div>
                         </div>
                         <div class="inner-column">
                             
-                            <p><span class="dropcap">U</span> Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquet per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra erat sed fermentum feugiat velit mauris egestas quam ut aliquam massa nisl quis neque.Sauris in erat justo. Nullam ac urna eu felis dapibus sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi..</p>
-                         
-                            <p>The world of search engine optimization is complex and ever-changing, but you can easily <strong>understand the basics</strong>, and even a small amount of SEO knowledge can make a big difference. <strong>Free SEO education</strong> is also widely available on the web, including in guides like this! (Woohoo!) This guide is designed to describe all major aspects of SEO, from finding the terms and phrases (keywords) that can generate qualified traffic to your website, to making your site friendly to search engines, to building links and marketing the unique value of your site.</p>
-                            <h4>Study Options:</h4>
+                            <p><%= curso.descripcion %></p>
+                            <h4>Recursos:</h4>
                             <table class="table table-bordered mb-30">
 													<thead>
 														<tr>
-															<th>Qualification</th>
-															<th>Length</th>
-															<th>Code</th>
+															<th>Archivo</th>
+															<th>Formulario</th>
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>Bsc (Hons)</td>
-															<td>3 years full time</td>
-															<td>CDX3</td>
-														</tr>
-														<tr>
-															<td>Bsc </td>
-															<td>4 years full time</td>
-															<td>CDX4</td>
+															<td><a href="<%= curso.url_pdf %>">Ver Documento</a></td>
+                                                            <td><a href="<%= curso.url_formulario%>">Evaluación</a></td>
 														</tr>
 													</tbody>
 												</table>
-                            <h4>What You Will Learn</h4>
+                            <!-- <h4>What You Will Learn</h4>
                             <p> Fusce eleifend donec sapien sed phase lusa pellentesque lacus.Vivamus lorem arcu semper duiac. Cras ornare arcu avamus nda leo Etiam ind arcu. Morbi justo mauris tempus pharetra interdum at congue semper purus. Lorem ipsum dolor sit </p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                            <ul class="pr-ul">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> -->
+                            <!-- <ul class="pr-ul">
                                 <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
@@ -138,45 +112,8 @@
                                     </div>
                                 </li>
                                
-                            </ul>
+                            </ul> -->
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                         <aside class="sidebar-widget">
-                          <section class="widget widget_search">
-                                <div class="course-widget-price">
-                               <h2 class="widget-title">Course Features</h2>
-                                <ul>
-
-                                    <li>
-                                        <i class="fal fa-exclamation-circle"></i>
-                                        <span>Duration</span>
-                                        <span class="time">2 Months</span>
-                                    </li>
-                                    <li>
-                                       <i class="fab fa-leanpub"></i>
-                                        <span>Class Duration</span>
-                                        <span class="time">7:00 - 9:00</span>
-                                    </li>
-                                    <li>
-                                       <i class="fal fa-user-graduate"></i>
-                                        <span>Institution</span>
-                                        <span class="time">ABC University</span>
-                                    </li>
-
-                                </ul>
-                                
-                            </div>
-                        
-                            
-                          </section>
-                         
-                          
-                          
-                       </aside>
-                    
-                      
-                        
                     </div>
 
                     

@@ -38,8 +38,55 @@ const mostrarCursosPorIdDelUsuario = async(req, res) => {
         res.status(500).json({mensaje: 'Hubo un error', error: error.message});
     }
 }
+const eliminarCurso = async(req, res) =>{
+    const idCurso = req.params.id;
+    try {
+        const curso = await Curso.findByPk(idCurso);
+        if (!curso) {
+            return res.status(404).send('El curso no existe');
+        }
+        await curso.destroy();
+        res.redirect('/cursos');
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({mensaje: 'Hubo un error', error: error.message});
+    }
+}
+const actualizarCurso = async(req, res) => {
+    const idCurso = req.params.id;
+    const { titulo, descripcion, url_imagen,url_video, url_formulario, url_pdf} = req.body;
+
+    // Validación básica de los campos requeridos
+    if (!titulo || !descripcion || !url_imagen ||!url_video || !url_formulario || !url_pdf) {
+        return res.status(400).json({ mensaje: 'Todos los campos son requeridos' });
+    }
+
+    try {
+        const curso = await Curso.findByPk(idCurso);
+        if (!curso) {
+            return res.status(404).send('El curso no existe');
+        }
+
+        // Actualización del curso con los datos validados
+        await curso.update({
+            titulo,
+            descripcion,
+            url_imagen,
+            url_video,
+            url_formulario,
+            url_pdf,
+        });
+
+        res.redirect('/cursos');
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ mensaje: 'Hubo un error', error: error.message });
+    }
+}
 
 export default{
     crearCurso,
-    mostrarCursosPorIdDelUsuario
+    mostrarCursosPorIdDelUsuario,
+    eliminarCurso,
+    actualizarCurso
 }

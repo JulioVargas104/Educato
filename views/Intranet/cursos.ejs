@@ -77,6 +77,14 @@
                                 <% if (curso.url_pdf) { %>
                                     <a href="<%= curso.url_pdf %>" target="_blank">Material en PDF</a>
                                 <% } %>
+                                <!-- Contenedor de botones -->
+                                <div class="d-flex justify-content-end mt-2">
+                                    <form action="/eliminar-curso/<%= curso.id %>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este curso?');">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger me-2">Eliminar</button>
+                                    </form>
+                                    <a href="/actualizar-curso/<%= curso.id %>" class="btn btn-primary">Actualizar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
