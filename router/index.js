@@ -6,6 +6,7 @@ import authController from '../Controllers/authController.js';
 import cursosController from '../Controllers/cursosController.js';
 const router = express.Router();
 
+/* Vista Publica */
 router.get('/',
     homeController.home
 ); 
@@ -28,6 +29,8 @@ router.get('/login',
 router.post('/login',
     authController.autenticarUsuario
 )
+
+/* Vista Privada */
 router.get('/cerrar-sesion',
     authController.usuarioAutenticado,
     authController.cerrarSesion
