@@ -11,11 +11,21 @@ const Usuario = db.define('usuarios', {
     },
     nombre: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'El nombre no puede ir vacío'
+        }
+      }
     },
     apellido: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'El apellido no puede ir vacío'
+        }
+      }
     },
     correo: {
         type: DataTypes.STRING,
@@ -29,7 +39,6 @@ const Usuario = db.define('usuarios', {
           }
         }
       },
-    
     password: {
         type: DataTypes.STRING(60),
         allowNull: false,
@@ -57,7 +66,11 @@ const Usuario = db.define('usuarios', {
                 msg: 'Rol no válido'
             }
         }
-    }
+    },
+    activo: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    },
 },
 {
     hooks: {

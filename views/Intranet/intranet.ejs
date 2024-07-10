@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet</title>
+    <!-- Incluir CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos existentes */
+        .bg-custom {
+            background-color: #007bff !important; /* Un tono de azul */
+        }
+        .list-group-item-action-custom:hover {
+            background-color: #0056b3 !important; /* Un tono de azul más oscuro al pasar el mouse */
+            color: white;
+        }
+        .sidebar-heading {
+            color: #fff;
+        }
+        #sidebar-wrapper {
+            min-width: 250px; /* Ajustar el ancho del sidebar */
+        }
+        .container-fluid {
+            padding: 2rem;
+        }
+        
+        /* Cambiar el color de texto de los enlaces a blanco */
+        .list-group-item-action-custom {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="d-flex" style="height: 100vh;">
+    <!-- Sidebar -->
+    <div class="bg-custom border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Intranet</div>
+        <div class="list-group list-group-flush">
+            <a href="/cursos" class="list-group-item list-group-item-action bg-custom list-group-item-action-custom">Crear Cursos</a>
+            <a href="#" class="list-group-item list-group-item-action bg-custom list-group-item-action-custom">Crear Usuarios</a>
+            <a href="/cerrar-sesion" class="list-group-item list-group-item-action bg-custom list-group-item-action-custom">Cerrar Sesión</a>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h1 class="mt-4">Bienvenido a la Intranet</h1>
+            <p>Seleccione una opción del menú para comenzar.</p>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+
+<!-- Incluir JS de Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
