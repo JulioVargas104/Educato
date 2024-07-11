@@ -19,7 +19,7 @@ const Curso = db.define('cursos', {
         }
     },
     descripcion: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
         validate: {
             notEmpty: {

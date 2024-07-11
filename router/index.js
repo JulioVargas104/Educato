@@ -30,16 +30,19 @@ router.post('/login',
     authController.autenticarUsuario
 )
 
-/* Vista Privada */
+/**Vista Privada*/
+
+/*Cerrar Sesion */
 router.get('/cerrar-sesion',
     authController.usuarioAutenticado,
     authController.cerrarSesion
 )
-
+/*Intranet */
 router.get('/intranet',
     authController.usuarioAutenticado,
     intranetController.intranet 
 )
+/*RestApi Cursos */
 router.get('/cursos',
     authController.usuarioAutenticado,
     intranetController.coursos
@@ -69,13 +72,23 @@ router.post('/actualizar-curso/:id',
     // authController.usuarioAutenticado,
     cursosController.actualizarCurso
 )
-
+/*RestApi Usuario*/
+router.get('/usuarios',
+    authController.usuarioAutenticado,
+    intranetController.usuarios
+)
+router.get('/crear-usuario',
+    authController.usuarioAutenticado,
+    intranetController.crearUsuario
+)
 router.get('/mostrar-usuario',
     usuarioController.mostrarUsuarios
 )
 router.post('/crear-usuario',
     usuarioController.crearUsuario
 )
-
+router.post('/eliminar-usuario/:id',
+    usuarioController.eliminarUsuario
+)
 
 export default () => router;

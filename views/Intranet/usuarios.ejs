@@ -54,49 +54,29 @@
         <div class="row">
             <div class="col text-right">
                 <!-- Botón para crear cursos -->
-                <a href="/crear-curso" class="btn btn-primary mb-3">Crear Curso</a>
+                <a href="/crear-usuario" class="btn btn-primary mb-3">Crear Usuario</a>
             </div>
         </div>
         
         <!-- Fila para la lista de cursos -->
         <!-- Fila para la lista de cursos -->
         <div class="row">
-            <% if (cursos && cursos.length > 0) { %>
-                <% cursos.forEach(function(curso) { %>
+            <% if (usuarios && usuarios.length > 0) { %>
+                <% usuarios.forEach(function(usuario) { %>
                     <div class="col-md-4">
                         <div class="list-group">
                             <div class="list-group-item">
-                                <h5 class="mb-1"><%= curso.titulo %></h5>
-                                <p class="mb-1">
-                                    <% 
-                                    let palabras = curso.descripcion.split(' ');
-                                    if (palabras.length > 20) {
-                                        %><%= palabras.slice(0, 20).join(' ') + '...' %><%
-                                    } else {
-                                        %><%= curso.descripcion %><%
-                                    }
-                                    %>
-                                </p>
-                                <% if (curso.url_video) { %>
-                                    <a href="<%= curso.url_video %>" target="_blank">Ver Video</a><br>
-                                <% } %>
-                                <% if (curso.url_formulario) { %>
-                                    <a href="<%= curso.url_formulario %>" target="_blank">Formulario de Evaluación</a><br>
-                                <% } %>
-                                <% if (curso.url_pdf) { %>
-                                    <a href="<%= curso.url_pdf %>" target="_blank">Material en PDF</a>
-                                <% } %>
-                                
+                                <h5 class="mb-1"><%= usuario.nombre %> <%= usuario.apellido %></h5>
+                                <p class="mb-1">Correo: <%= usuario.correo %></p>
+                                <p class="mb-1">Cargo: <%= usuario.cargo %></p>
+                                <p class="mb-1">Rol: <%= usuario.rol %></p>
                                 <!-- Contenedor de botones -->
                                 <div class="d-flex justify-content-end mt-2">
-                                    <form action="/eliminar-curso/<%= curso.id %>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este curso?');">
+                                    <form action="/eliminar-usuario/<%= usuario.id %>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button type="submit" class="btn btn-danger me-2">Eliminar</button>
                                     </form>
-                                    <a href="/actualizar-curso/<%= curso.id %>" class="btn btn-primary me-2">Actualizar</a>
-                                    <% if (curso.id) { %>
-                                    <a href="/courser-detallados/<%= curso.id %>" class="btn btn-success" target="_blank">Ver Detalles</a>
-                                    <% } %>
+                                    <a href="/actualizar-usuario/<%= usuario.id %>" class="btn btn-primary">Actualizar</a>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +84,7 @@
                 <% }); %>
             <% } else { %>
                 <div class="col">
-                    <p>No hay cursos disponibles en este momento.</p>
+                    <p>No hay usuarios disponibles en este momento.</p>
                 </div>
             <% } %>
         </div>
